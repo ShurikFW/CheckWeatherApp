@@ -20,7 +20,7 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2db0e0', endColorstr='#6028a8', GradientType=1 );
 }
 
-.main {
+.main-light {
   height: 55vh;
   background: #fcfcfc;
   box-shadow: 0px 2px 80px -20px rgba(0,0,0,0.5);
@@ -29,7 +29,7 @@ body {
 }
 .main-dark {
   height: 55vh;
-  background: #413535;
+  background: #2c2a2a;
   box-shadow: 0px 2px 80px -20px rgba(0,0,0,0.5);
   width: 60%;
   margin: 0 auto;
@@ -64,7 +64,7 @@ body {
 input[type="text"] {
   background-color: transparent;
   border: 0;
-  border-bottom: solid 2px #113a65;
+  border-bottom: solid 2px #5490cb;
   width: 50%;
   padding-bottom: 4px;
   color: #a6a3a3;
