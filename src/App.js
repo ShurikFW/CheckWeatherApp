@@ -22,6 +22,7 @@ class App extends React.Component{
     pressure: undefined,
     sunset: undefined,
     error: undefined,
+    theme: 'light',
   }
 
 
@@ -58,20 +59,23 @@ class App extends React.Component{
       });
     }
   }
+        toggleTheme = async(e) => {
+        var theme = this.state.theme === 'light' ? 'dark' : 'light'
+        this.setState({theme : theme})
+      }
 
 
   render() {
     return (
         <div className='wrapper'>
-          <div className="main">
+          <div className={'main-'+this.state.theme}>
           <div className = "container">
             <div className ="row">
               <div className="col-sm-5 info">
                 <Info/>
               </div>
               <div className="col-sm-7">
-                <button>Switcher</button>
-                
+              <button onClick={this.toggleTheme}>Switch Theme</button>
                 <Form weatherMethod= {this.gettingWeather} />
                 <Weather
                 temp={this.state.temp}
